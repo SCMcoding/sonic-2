@@ -1,0 +1,96 @@
+/* Change these colors to customize the website. */
+    :root {
+      --background: #5EB1B8;
+      --banner: #293747;
+      --navigation: #1e2935;
+      --section: #B85E5E;
+      --section-muted: #e9f2f8;
+      --section-accent: #eaf1f7;
+      --text: #26313a;
+      --heading: #293747;
+      --link: #ffffff;
+      --accent: #497da3;
+      --section-border: #d9dee3;
+      --picture-background: #dce8f1; /* Default gallery placeholder color */
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--background);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* Banner: put your PNG file at images/banner.png. */
+    /* Replace the file, or change its name below. */
+    /* Banner keeps its original dark color if the PNG is missing. */
+    /* The image is optional: remove url("images/banner.png") below for solid color. */
+    /* Banner */
+    header {
+      background: linear-gradient(rgba(24,39,55,.25),rgba(24,39,55,.25)), url("images/banner.png") center / cover no-repeat, var(--banner);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    header h1 { margin: 0; font-size: 38px; }
+    header p { margin-bottom: 0; }
+
+    /* Navigation bar */
+    nav {
+      background: var(--navigation);
+      padding: 12px;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+    nav a { color: var(--link); text-decoration: none; }
+    nav a:hover { text-decoration: underline; }
+
+    main { max-width: 960px; margin: 32px auto; padding: 0 20px; }
+    section {
+      background: var(--section);
+      border: 1px solid var(--section-border);
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+    h2 { color: var(--heading); margin-top: 0; }
+
+    /* Image placeholders */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+    }
+    .picture {
+      background: var(--picture-background);
+      border: 1px dashed #9aa8b4;
+      min-height: 170px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #536574;
+    }
+    .picture img { width: 100%; height: 170px; object-fit: cover; display: block; }
+    .picture { overflow: hidden; }
+
+    .button {
+      display: inline-block;
+      color: white;
+      background: var(--accent);
+      text-decoration: none;
+      padding: 10px 16px;
+    }
+    footer { background: var(--navigation); color: white; text-align: center; padding: 20px; }
+  
+    /* Optional: add a subtle shade so banner text stays readable over a PNG. */
+    header { text-shadow: 0 1px 3px rgba(0,0,0,.65); }
+    nav a[aria-current="page"] { text-decoration: underline; text-underline-offset: 4px; }
+
+/* Optional different-colored sections: change these colors or remove the classes. */
+.section-muted { background: var(--section-muted); }
+.section-accent { background: var(--section-accent); border-left: 5px solid var(--accent); }
